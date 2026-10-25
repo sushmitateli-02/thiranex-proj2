@@ -52,7 +52,19 @@ def scan_website(url):
     print("\n".join(report))
     print("\nReport saved as vulnerability_report.txt")
 
+OUTPUT:
+Enter an authorized website URL: https://example.com
+VULNERABILITY SCANNER REPORT
+Date: 2026-10-25 15:45:10.588018
+Target: https://example.com
+---------------------------------------------
+[INFO] HTTPS is being used.
+HTTP Status: 200
+[REVIEW] Content-Security-Policy is missing.
+Purpose: Helps reduce certain injection risks.
+[REVIEW] X-Content-Type-Options is missing.
+Purpose: Helps prevent MIME-type sniffing.
+[REVIEW] Strict-Transport-Security is missing.
+Purpose: Helps enforce HTTPS in supporting browsers.
 
-if __name__ == "__main__":
-    website = input("Enter an authorized website URL: ").strip()
-    scan_website(website)
+Report saved as vulnerability_report.txt
